@@ -19,7 +19,6 @@ public class CardOrderTest {
 
     @BeforeAll
     static void setUpDriver() {
-        System.setProperty("webdriver.chrome.driver", "/driver/win/chromedriver.exe");
         WebDriverManager.chromedriver().setup();
     }
 
@@ -138,8 +137,8 @@ public class CardOrderTest {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Иоган Кристиан");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79874574582");
         driver.findElement(By.tagName("button")).click();
-        boolean actual = driver.findElement(By.cssSelector("[data-test-id='agreement'].input_invalid .checkbox__box")).isSelected();
-        assertTrue(true);
+        boolean actual = driver.findElement(By.cssSelector("[data-test-id='agreement'].input_invalid .checkbox__box")).isDisplayed();
+        assertTrue(actual);
     }
 
 
