@@ -140,6 +140,4 @@ public class CardOrderTest {
         boolean actual = driver.findElement(By.cssSelector("[data-test-id='agreement'].input_invalid .checkbox__box")).isDisplayed();
         assertTrue(actual);
     }
-
-
 }
